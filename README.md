@@ -1,1 +1,2 @@
-# SemanticTemporalFusion
+# Semantic Temporal Fusion
+
