@@ -1,0 +1,26 @@
+# Literature
+
+| Paper  | Datasets  | Pose  |   |   |
+|---|---|---|---|---|
+| 1  |Standford 2D-3D-Semantic   |   |   |   |
+|   | SceneNet RGB-D  |   |   |   |
+|   | NyuV2  |   |   |   |
+
+
+## References 
+
+* [1] Ma, Lingni et al. “Multi-view deep learning for consistent semantic mapping with RGB-D cameras.” 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2017): 598-605.
+* [2] Zhi, Shuaifeng et al. “SceneCode: Monocular Dense Semantic Reconstruction Using Learned Encoded Scene Representations.” 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2019): 11768-11777.
+
+## Datasets
+
+* [Standford 2D-3D-Semantic] Iro Armeni, Alexander Sax, Amir R. Zamir, and Silvio Savarese. Joint 2D-3D-Semantic Data for Indoor Scene Understanding. arXiv preprint arXiv:1702.01105, 2017.
+* [SceneNet RGB-D] John McCormac, Ankur Handa, Stefan Leutenegger, and 
+Andrew J. Davison. SceneNet RGB-D: Can 5M Synthetic
+Images Beat Generic ImageNet Pre-training on Indoor Seg-
+mentation? In Proceedings of the International Conference
+on Computer Vision (ICCV), 2017
+* [NyuV2] Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob
+Fergus. Indoor Segmentation and Support Inference from
+RGBD Images. In Proceedings of the European Conference
+on Computer Vision (ECCV), 2012.
