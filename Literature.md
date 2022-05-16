@@ -7,6 +7,12 @@
 |   | NyuV2  |   |   |   |
 
 
+Multimodal fusion vs Multi-view fusion
+
+Multi-view with pose vs multi-view stereo fusion 
+
+
+
 ## References 
 
 * [1] Ma, Lingni et al. “Multi-view deep learning for consistent semantic mapping with RGB-D cameras.” 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2017): 598-605.
