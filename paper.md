@@ -1,7 +1,7 @@
 
 # Questions 
 
-## Q1 What did the community know before you did whatever you did?
+### Q1 What did the community know before you did whatever you did?
 * Semantic fusion is better ?
 * Different types of fusion [Survey paper on multimodal Fusion](https://hal-univ-evry.archives-ouvertes.fr/hal-02963619/file/Deep_Multimodal_Fusion_for_Semantic_Image_Segmentation__A_Survey.pdf):
     * Early fusion (data fusion)
@@ -10,11 +10,13 @@
         * [Statistical fusion Baseline paper](https://arxiv.org/abs/1807.11249) 
         * 
 
-## Q2 What are the new things you learned after you did whatever you did?
+### Q2 What are the new things you learned after you did whatever you did?
 
-## Q3 What exactly did you do?
+### Q3 What exactly did you do?
 
+### Q4 Why should the community care?
 
+### Q5 What does the community still not know?
 
 
 
