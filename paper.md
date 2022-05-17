@@ -17,24 +17,20 @@
 * In this work, we focus on semantic fusion with minimum computation.
 * This is achieved by muti-view geometry and exploiting the redundancy in temporal multi-view geometry.
 
-
-
 ### Q1 What did the community know before you did whatever you did?
 * Semantic fusion is better ?
 * Different types of fusion:
-    * Multi-modal fusion
-    * Multi-view fusion
+   * Multi-modal fusion
+   * Multi-view fusion
 * Different types of fusion based on where we do fusion [Survey paper on multimodal Fusion](https://hal-univ-evry.archives-ouvertes.fr/hal-02963619/file/Deep_Multimodal_Fusion_for_Semantic_Image_Segmentation__A_Survey.pdf):
-    * Early fusion (data fusion)
-    * Latent Fusion
-    * Late fusion (decision fusion)
-        * [Statistical fusion Baseline paper](https://arxiv.org/abs/1807.11249) 
-    * Hybrid fusion 
-
+   * Early fusion (data fusion)
+   * Latent Fusion
+   * Late fusion (decision fusion)
+     * [Statistical fusion Baseline paper](https://arxiv.org/abs/1807.11249) 
+   * Hybrid fusion 
 * Multimodal vs multiview semantic fusion
 * Multiview batch vs multiview incremental semantic fusion 
 * Multiview early vs multiview latent vs multiview late fusion
-* 
 
 ### Q2 What are the new things you learned after you did whatever you did?
 
