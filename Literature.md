@@ -11,13 +11,17 @@ Multimodal fusion vs Multi-view fusion
 
 Multi-view with pose vs multi-view stereo fusion 
 
-
+### Why it is important
+In [4] camera pose is used to improve depth prediction by creating a new data augmentation methodology and training the depth estimator with different novel poses while training.  In our method we dont retrain the model but use the pose, uncertainty prediction and the uncertainty fusion to improve the output.
+It also provides another method of encoding each camera pose as an image and providing during training and testing. 
 
 ## References 
 
 * [1] Ma, Lingni et al. “Multi-view deep learning for consistent semantic mapping with RGB-D cameras.” 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2017): 598-605.
 * [2] Zhi, Shuaifeng et al. “SceneCode: Monocular Dense Semantic Reconstruction Using Learned Encoded Scene Representations.” 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2019): 11768-11777.
 * [3] H. Blum, A. Gawel, R. Siegwart and C. Cadena, "Modular Sensor Fusion for Semantic Segmentation," 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2018, pp. 3670-3677, doi: 10.1109/IROS.2018.8593786.
+* [4] Zhao Y, Kong S, Fowlkes C. Camera pose matters: Improving depth prediction by mitigating pose distribution bias. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2021 (pp. 15759-15768).
+* [5] 
 
 ## Datasets
 
