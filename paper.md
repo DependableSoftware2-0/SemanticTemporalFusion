@@ -4,7 +4,7 @@
 
 * DNN outputs are unreliable and cannot be trusted to make decisions in autonomous systems.
 * Different methodology has been proposed to increase the reliability of the DNN including
-   * Architecture modifications
+   * Architecture modifications ?
    * Training modifications
    * Loss function modifications
    * Uncertainty estimation in addition to the output
@@ -31,6 +31,10 @@
 * Multimodal vs multiview semantic fusion
 * Multiview batch vs multiview incremental semantic fusion 
 * Multiview early vs multiview latent vs multiview late fusion
+* Image segmentation vs Video segmentation 
+   * [Baseline video segmentation with fusion - Accel](https://arxiv.org/pdf/1807.06667.pdf)
+
+* efficiency-accuracy trade off
 
 ### Q2 What are the new things you learned after you did whatever you did?
 
