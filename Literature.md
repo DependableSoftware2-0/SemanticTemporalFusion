@@ -40,3 +40,4 @@ on Computer Vision (ECCV), 2012.
 ### Outdoor
 * [The SYNTHIA dataset (sythetic)] G. Ros, L. Sellart, J. Materzynska, D. Vazquez and A. M. Lopez, "The SYNTHIA dataset: A large collection of synthetic images for semantic segmentation of urban scenes", 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3234-3243, Jun. 2016.
 * [Citiscpes Dataset (Real)]M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, et al., "The cityscapes dataset for semantic urban scene understanding", 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3213-3223, Jun. 2016.
+* [Replica Dataset](https://github.com/facebookresearch/Replica-Dataset)
