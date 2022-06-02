@@ -17,6 +17,8 @@ It also provides another method of encoding each camera pose as an image and pro
 
 In [5] they have used 2 deep learning branches and it fuses internal based on opticalflow. Its a video segmentation task. Tested on cityscapes and camvid datasets. It asks the accuracy vs efficency tradeoff. 
 
+In [6] for the task of 6D pose estimation they have used fusion of the uncertainty in the pose estimation for improving the pose. This is a output layer fusion method. 
+
 
 ## References 
 
@@ -25,6 +27,7 @@ In [5] they have used 2 deep learning branches and it fuses internal based on op
 * [3] H. Blum, A. Gawel, R. Siegwart and C. Cadena, "Modular Sensor Fusion for Semantic Segmentation," 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2018, pp. 3670-3677, doi: 10.1109/IROS.2018.8593786.
 * [4] Zhao Y, Kong S, Fowlkes C. Camera pose matters: Improving depth prediction by mitigating pose distribution bias. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2021 (pp. 15759-15768).
 * [5] Jain S, Wang X, Gonzalez JE. Accel: A corrective fusion network for efficient semantic segmentation on video. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2019 (pp. 8866-8875).
+* [6] J. Richter-Klug, P. Mania, G. Kazhoyan, M. Beetz and U. Frese, "Improving Object Pose Estimation by Fusion With a Multimodal Prior – Utilizing Uncertainty-Based CNN Pipelines for Robotics," in IEEE Robotics and Automation Letters, vol. 7, no. 2, pp. 2282-2288, April 2022, doi: 10.1109/LRA.2022.3140450.
 
 ## Datasets
 
