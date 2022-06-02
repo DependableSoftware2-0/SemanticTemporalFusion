@@ -16,22 +16,26 @@
 * Higher computation problem for embedded applications like autnomous car, robots and in general environment.
 * In this work, we focus on semantic fusion with minimum computation.
 * This is achieved by muti-view geometry and exploiting the redundancy in temporal multi-view geometry.
+* We also focus on the fusion of uncertain information 
 
 ### Q1 What did the community know before you did whatever you did?
 * Semantic fusion is better ?
 * Different types of fusion:
    * Multi-modal fusion
    * Multi-view fusion
+       * Multiview batch vs multiview incremental semantic fusion 
+       * Multiview early vs multiview latent vs multiview late fusion
 * Different types of fusion based on where we do fusion [Survey paper on multimodal Fusion](https://hal-univ-evry.archives-ouvertes.fr/hal-02963619/file/Deep_Multimodal_Fusion_for_Semantic_Image_Segmentation__A_Survey.pdf):
    * Early fusion (data fusion)
    * Latent Fusion
    * Late fusion (decision fusion)
      * [Statistical fusion Baseline paper](https://arxiv.org/abs/1807.11249) 
-     * [6D pose fusion ]()
+     * [6D pose fusion ](https://ieeexplore.ieee.org/document/9670642)
    * Hybrid fusion 
+* Type of fusion
+   * Exact evidence fusion
+   * Uncertain evidence fusion, [Improving Object Pose Estimation by Fusion With a Multimodal Prior – Utilizing Uncertainty](https://ieeexplore.ieee.org/document/9670642)
 * Multimodal vs multiview semantic fusion
-* Multiview batch vs multiview incremental semantic fusion 
-* Multiview early vs multiview latent vs multiview late fusion
 * Image segmentation vs Video segmentation 
    * [Baseline video segmentation with fusion - Accel](https://arxiv.org/pdf/1807.06667.pdf)
 
