@@ -27,6 +27,7 @@
    * Latent Fusion
    * Late fusion (decision fusion)
      * [Statistical fusion Baseline paper](https://arxiv.org/abs/1807.11249) 
+     * [6D pose fusion ]()
    * Hybrid fusion 
 * Multimodal vs multiview semantic fusion
 * Multiview batch vs multiview incremental semantic fusion 
