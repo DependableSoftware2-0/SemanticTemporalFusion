@@ -5,6 +5,8 @@
 | 1  |Standford 2D-3D-Semantic   |   |   |   |
 |   | SceneNet RGB-D  |   |   |   |
 |   | NyuV2  |   |   |   |
+|   | InteriorNet  |   |   |   |
+|   | Scannet  |   |   |   |
 
 
 Multimodal fusion vs Multi-view fusion
@@ -14,6 +16,7 @@ Multi-view with pose vs multi-view stereo fusion
 ### Why it is important
 In [4] camera pose is used to improve depth prediction by creating a new data augmentation methodology and training the depth estimator with different novel poses while training.  In our method we dont retrain the model but use the pose, uncertainty prediction and the uncertainty fusion to improve the output.
 It also provides another method of encoding each camera pose as an image and providing during training and testing. 
+It also has provided a datloader for ScanNet and InteirorNet. 
 
 In [5] they have used 2 deep learning branches and it fuses internal based on opticalflow. Its a video segmentation task. Tested on cityscapes and camvid datasets. It asks the accuracy vs efficency tradeoff. 
 
@@ -42,9 +45,13 @@ on Computer Vision (ICCV), 2017
 Fergus. Indoor Segmentation and Support Inference from
 RGBD Images. In Proceedings of the European Conference
 on Computer Vision (ECCV), 2012.
+* [InteriorNet] an end-to-end pipeline to render an RGB-D-inertial benchmark for large scale interior scene understanding and mapping. Our dataset contains 20M images created by pipeline. 
+    - [pytroch dataloader ]( https://github.com/yzhao520/CPP/tree/master/dataloader )
+* [Scannet] 
+    - [pytroch dataloader ]( https://github.com/yzhao520/CPP/tree/master/dataloader )
 
 ### Outdoor
-* [The SYNTHIA dataset (sythetic)] G. Ros, L. Sellart, J. Materzynska, D. Vazquez and A. M. Lopez, "The SYNTHIA dataset: A large collection of synthetic images for semantic segmentation of urban scenes", 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3234-3243, Jun. 2016.
+* [The SYNTHIA dataset (synthetic)] G. Ros, L. Sellart, J. Materzynska, D. Vazquez and A. M. Lopez, "The SYNTHIA dataset: A large collection of synthetic images for semantic segmentation of urban scenes", 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3234-3243, Jun. 2016.
 * [Citiscpes Dataset (Real)]M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, et al., "The cityscapes dataset for semantic urban scene understanding", 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3213-3223, Jun. 2016. 
   * https://github.com/mcordts/cityscapesScripts
 * [Replica Dataset](https://github.com/facebookresearch/Replica-Dataset)
