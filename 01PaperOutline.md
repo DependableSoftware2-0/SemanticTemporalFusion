@@ -12,9 +12,9 @@
 * These methods can be classified in 2 categories: DNN internal improvements and DNN external improvements.
 * Semantic fusion is an external reliability improvement methodology.
 * All fusion methods improve reliability and make the output fault-tolerant of the intermittent faults in the output.
-* In this work, we investigate does external semantic fusion with pose information and uncertain DNN output improves the prediction.
-* However, they all come at higher computation cost. Multi-modal needs multiple DNN feature extractor.
-* Higher computation problem for embedded applications like autonomous car, robots and in general environment.
+* In this work, we investigate does external semantic fusion with pose information and uncertain DNN output improves prediction/reliability.
+* However, semantic fusion comes at higher computation cost. Multi-modal needs multiple DNN feature extractor.
+* Higher computation is a problem for embedded applications like autonomous car, robots and in general environment.
 * In this work, we focus on semantic fusion with minimum computation.
 * This is achieved by muti-view geometry and exploiting the redundancy in temporal multi-view geometry.
 * We also focus on the fusion of uncertain information 
@@ -49,7 +49,8 @@
 * Exploiting temporal redundancy in the data to get ~robust and~ reliable output with minimum computation.
 * Semantic fusion for the task of object picking with a manipulator having a tooltip camera.
 * Incremental Semantic fusion
-* Benchmarking uncertainty estimation methods with differnt uncertainty fusion method for the task of semantic fusion
+* Benchmarking uncertainty estimation methods  for the task of semantic fusion.
+* Benchmarking uncertainty fusion methods for the task of semantic fusion. 
 
 ### Q5 What does the community still not know?
 
