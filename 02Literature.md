@@ -1,5 +1,5 @@
 # Literature
-
+## Datasets
 | Paper  | Datasets  | Pose  |   |   |
 |---|---|---|---|---|
 | 1  |Standford 2D-3D-Semantic   |   |   |   |
@@ -8,10 +8,9 @@
 |   | InteriorNet  |   |   |   |
 |   | Scannet  |   |   |   |
 
+https://sites.google.com/view/awesome-slam-datasets/
+copu of the sheet - https://docs.google.com/spreadsheets/d/1yTKz4F-4vhSpPWc9nDrm1ZvJgln0jLhInFbBdeQOZeQ/edit#gid=1823356432
 
-Multimodal fusion vs Multi-view fusion
-
-Multi-view with pose vs multi-view stereo fusion 
 
 ### Why it is important
 In [4] camera pose is used to improve depth prediction by creating a new data augmentation methodology and training the depth estimator with different novel poses while training.  In our method we dont retrain the model but use the pose, uncertainty prediction and the uncertainty fusion to improve the output.
@@ -21,6 +20,13 @@ It also has provided a datloader for ScanNet and InteirorNet.
 In [5] they have used 2 deep learning branches and it fuses internal based on opticalflow. Its a video segmentation task. Tested on cityscapes and camvid datasets. It asks the accuracy vs efficency tradeoff. 
 
 In [6] for the task of 6D pose estimation they have used fusion of the uncertainty in the pose estimation for improving the pose. This is a output layer fusion method. 
+
+
+### Other comparison
+Multimodal fusion vs Multi-view fusion
+
+Multi-view with pose vs multi-view stereo fusion 
+
 
 
 ## References 
