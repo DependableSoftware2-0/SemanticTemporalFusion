@@ -2,6 +2,32 @@
 # Questions 
 ### Q4 Why should the community care?
 
+* DNN performance is directly related to its capacity (cite papers with the pareto curve)
+* Bigger the size of the network better the performance of the network.
+* Autonomous systems especially robots are embedded devices and have limited resources.
+* The DNN which are deployed on autonomous systems have constraints of the resources from the system.
+* The limited resources have a limit on the size of the network and hence will produce sub-par performance.
+* As the DNN outputs are used for making autonomous decisions the performance degradation in the DNN will lead
+to catastropic failure in the system.
+* Different methodology has been proposed to improve the performance of DNN in constrained enviroments:
+   * Architecture modifications ?
+   * Training modifications
+   * Loss function modifications
+   * information Fusion
+   * output fusion 
+* Even though atonomnous systems are constrined by the hardware limitations they have an advantage that they
+are embodied agents.
+* The embodiement of the agent can be used to overcome the limitation.
+* The embodiement of the agent has an advantage that the agents can move around and collect more information
+Thus they dont need to make decision based on single source of data.
+* The different sources of data now can fused to make a 
+* In this work, we focus on the task of semantic segmentation with DNN. Our goal is to improve the performance of 
+semantic segmentation with minimum increase of computation by exploiting the embodiment and the redundancy of information.
+* We propose to use Multi-View geometry and semantic fusion
+* Our goal is to 
+
+
+### Reliability based introduction 
 * DNN outputs are unreliable and cannot be trusted to make decisions in autonomous systems.
 * Different methodology has been proposed to increase the reliability of the DNN including
    * Architecture modifications ?
