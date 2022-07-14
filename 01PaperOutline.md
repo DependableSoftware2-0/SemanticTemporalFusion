@@ -15,6 +15,8 @@ to catastropic failure in the system.
    * Loss function modifications
    * information Fusion
    * output fusion 
+
+![How deeplearning used for video ](https://static.wixstatic.com/media/226638_85aaca247fe14b4f8222ccba3e20e135~mv2.png/v1/fill/w_512,h_196,al_c,q_85,enc_auto/frames-fusion.png) https://www.ridgerun.com/video-based-ai
 * Even though atonomnous systems are constrined by the hardware limitations they have an advantage that they
 are embodied agents.
 * The embodiement of the agent can be used to overcome the limitation.
