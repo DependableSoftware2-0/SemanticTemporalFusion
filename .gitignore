@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#PYTORCH SAVED MODELS
+*.pt
+*.npy
+*.ckpt
+lightning_logs/
+
 # C extensions
 *.so
 
