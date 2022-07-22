@@ -29,7 +29,9 @@ Multi-view with pose vs multi-view stereo fusion
 * [5] Jain S, Wang X, Gonzalez JE. Accel: A corrective fusion network for efficient semantic segmentation on video. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2019 (pp. 8866-8875).
 * [6] J. Richter-Klug, P. Mania, G. Kazhoyan, M. Beetz and U. Frese, "Improving Object Pose Estimation by Fusion With a Multimodal Prior – Utilizing Uncertainty-Based CNN Pipelines for Robotics," in IEEE Robotics and Automation Letters, vol. 7, no. 2, pp. 2282-2288, April 2022, doi: 10.1109/LRA.2022.3140450.
 * [7]  Zongbo Han, Changqing Zhang, Huazhu Fu, Joey Tianyi Zhou "Trusted Multi-View Classification" ICLR 2021
-
+* [8] Douglas Morrison1, Peter Corke1 and J ̈urgen Leitner1 Multi-View Picking: Next-best-view Reaching for Improved Grasping in Clutter
+     - Network learns to find next best view to pick 
+     - Required for the argument on why robots eed this multi view solution 
 
 ## Datasets
 | Paper  | Datasets  | Pose  |   |   |
