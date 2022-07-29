@@ -1,6 +1,6 @@
 import torch
+import numpy as np
 import efprob_dc as efprob_dc
-
 
 class DempsterSchaferCombine(torch.nn.Module):
     '''
@@ -13,18 +13,19 @@ class DempsterSchaferCombine(torch.nn.Module):
         self.n_classes = n_classes
         
     def forward(self, alpha1, alpha2, debug_pixel=0):
-        assert alpha1.ndim == 4
-        assert alpha2.ndim == 4
+        assert (alpha1.ndim == 4) or (alpha1.ndim == 2)
+        assert (alpha2.ndim == 4) or (alpha1.ndim == 2)
         assert alpha1.shape == alpha2.shape
         assert alpha1.shape[1] == self.n_classes
         assert alpha2.shape[1] == self.n_classes
         
-        # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
-        alpha1 = alpha1.permute(0,2,3,1)
-        alhpa2 = alpha2.permute(0,2,3,1)
-        # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
-        alpha1 = alpha1.reshape(-1, self.n_classes) 
-        alpha2 = alpha2.reshape(-1, self.n_classes) 
+        if 4 == alpha1.ndim:
+            # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
+            alpha1 = alpha1.permute(0,2,3,1)
+            alhpa2 = alpha2.permute(0,2,3,1)
+            # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
+            alpha1 = alpha1.reshape(-1, self.n_classes) 
+            alpha2 = alpha2.reshape(-1, self.n_classes) 
         
         #print ("alpha 1 ", debug_pixel, alpha1[debug_pixel])
         #print ("alpha 2 ", debug_pixel, alpha2[debug_pixel])
@@ -71,6 +72,7 @@ class DempsterSchaferCombine(torch.nn.Module):
         return alpha_a
         
         
+
 class EffectiveProbability(torch.nn.Module):
     '''
     EffectiveProbability used efprob library which can do constructive and
@@ -107,6 +109,7 @@ class EffectiveProbability(torch.nn.Module):
   
             
         self.fusion_type = fusion_type
+        print ("Initialized fusion type : ", fusion_type)
             
     def single_row_calculation(self, prior, current):
         assert prior.ndim == 1
@@ -124,24 +127,26 @@ class EffectiveProbability(torch.nn.Module):
             else:
                 print ("select fusion_type as bayes or dampster")
         except:
-            print(prior, current)
+            print("ERROR Printing prior and current", prior, current)
 
         return posterior.array
     
         
     def forward(self, prior, current):
-        assert prior.ndim == 4
-        assert current.ndim == 4
+        assert (prior.ndim == 4) or (prior.ndim == 2) 
+        assert (current.ndim == 4) or (current.ndim == 2) 
         assert prior.shape == current.shape
         assert prior.shape[1] == self.n_classes
         assert current.shape[1] == self.n_classes
         
-        # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
-        prior = prior.permute(0,2,3,1)
-        current = current.permute(0,2,3,1)
-        # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
-        prior = prior.reshape(-1, self.n_classes) 
-        current = current.reshape(-1, self.n_classes) 
+        if 4 == prior.ndim:
+            # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
+            prior = prior.permute(0,2,3,1)
+            current = current.permute(0,2,3,1)
+            # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
+            prior = prior.reshape(-1, self.n_classes) 
+            current = current.reshape(-1, self.n_classes) 
+        
         
         #Converting dirchlet to probability
         prior = prior/prior.sum(dim=1, keepdim=True)
@@ -155,4 +160,58 @@ class EffectiveProbability(torch.nn.Module):
                     current)
        
         return torch.tensor(np.array(list(posterior)))
+    
+
+class SumUncertainty(torch.nn.Module):
+    '''
+    SumUncertainty will combine 2 dirichlet distribution.
+    The assumption is that you will get a batch of predictions.
+    The output is of ndim = 2 or shape of [batch*height*width, n_classes] 
+    '''
+    def __init__(self, n_classes):
+        super(SumUncertainty, self).__init__()
+        self.n_classes = n_classes
         
+    def forward(self, alpha1, alpha2):
+        assert (alpha1.ndim == 4) or (alpha1.ndim == 2)
+        assert (alpha2.ndim == 4) or (alpha1.ndim == 2)
+        assert alpha1.shape == alpha2.shape
+        assert alpha1.shape[1] == self.n_classes
+        assert alpha2.shape[1] == self.n_classes
+        
+        if 4 == alpha1.ndim:
+            # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
+            alpha1 = alpha1.permute(0,2,3,1)
+            alhpa2 = alpha2.permute(0,2,3,1)
+            # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
+            alpha1 = alpha1.reshape(-1, self.n_classes) 
+            alpha2 = alpha2.reshape(-1, self.n_classes) 
+            
+        return alpha1 + alpha2
+    
+class MeanUncertainty(torch.nn.Module):
+    '''
+    MeanUncertainty will combine 2 dirichlet distribution.
+    The assumption is that you will get a batch of predictions.
+    The output is of ndim = 2 or shape of [batch*height*width, n_classes] 
+    '''
+    def __init__(self, n_classes):
+        super(MeanUncertainty, self).__init__()
+        self.n_classes = n_classes
+        
+    def forward(self, alpha1, alpha2):
+        assert (alpha1.ndim == 4) or (alpha1.ndim == 2)
+        assert (alpha2.ndim == 4) or (alpha1.ndim == 2)
+        assert alpha1.shape == alpha2.shape
+        assert alpha1.shape[1] == self.n_classes
+        assert alpha2.shape[1] == self.n_classes
+        
+        if 4 == alpha1.ndim:
+            # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
+            alpha1 = alpha1.permute(0,2,3,1)
+            alhpa2 = alpha2.permute(0,2,3,1)
+            # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
+            alpha1 = alpha1.reshape(-1, self.n_classes) 
+            alpha2 = alpha2.reshape(-1, self.n_classes) 
+            
+        return (alpha1 + alpha2)/2
