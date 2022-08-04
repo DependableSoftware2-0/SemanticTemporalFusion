@@ -19,19 +19,23 @@ class DempsterSchaferCombine(torch.nn.Module):
         assert alpha1.shape[1] == self.n_classes
         assert alpha2.shape[1] == self.n_classes
         
+        reshape_flag = False
         if 4 == alpha1.ndim:
+            bs, channels, height, width = alpha1.size()
             # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
             alpha1 = alpha1.permute(0,2,3,1)
-            alhpa2 = alpha2.permute(0,2,3,1)
+            alpha2 = alpha2.permute(0,2,3,1)
             # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
             alpha1 = alpha1.reshape(-1, self.n_classes) 
             alpha2 = alpha2.reshape(-1, self.n_classes) 
+            reshape_flag = True
         
         #print ("alpha 1 ", debug_pixel, alpha1[debug_pixel])
         #print ("alpha 2 ", debug_pixel, alpha2[debug_pixel])
         
         # Calculate the merger of two DS evidences
         alpha = dict()
+        #alpha[0], alpha[1] = alpha1, alpha2
         alpha[0], alpha[1] = alpha1, alpha2
         b, S, E, u = dict(), dict(), dict(), dict()
         for v in range(2):
@@ -66,9 +70,15 @@ class DempsterSchaferCombine(torch.nn.Module):
         e_a = torch.mul(b_a, S_a.expand(b_a.shape))
         alpha_a = e_a + 1
         
-        #print (alpha_a.shape)
-        
         #print ("alpha_a ", debug_pixel, alpha_a[debug_pixel])
+        if reshape_flag:
+            # [batch_size*height*width, n_classes] -> [batch_size, height, width, n_classes] 
+            alpha_a = alpha_a.reshape(bs, height, width, self.n_classes) 
+            # [batch_size, height, width, n_classes] -> [batch_size,n_classes, height, width] 
+            alpha_a =  alpha_a.permute(0,3,1,2)  
+
+            
+            
         return alpha_a
         
         
@@ -139,14 +149,16 @@ class EffectiveProbability(torch.nn.Module):
         assert prior.shape[1] == self.n_classes
         assert current.shape[1] == self.n_classes
         
+        reshape_flag = False
         if 4 == prior.ndim:
+            bs, channels, height, width = prior.size()
             # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
             prior = prior.permute(0,2,3,1)
             current = current.permute(0,2,3,1)
             # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
             prior = prior.reshape(-1, self.n_classes) 
             current = current.reshape(-1, self.n_classes) 
-        
+            reshape_flag = True
         
         #Converting dirchlet to probability
         prior = prior/prior.sum(dim=1, keepdim=True)
@@ -158,8 +170,16 @@ class EffectiveProbability(torch.nn.Module):
         posterior = map(self.single_row_calculation, 
                     prior, 
                     current)
+        posterior = torch.tensor(np.array(list(posterior)))
+        
+        if reshape_flag:
+            # [batch_size*height*width, n_classes] -> [batch_size, height, width, n_classes] 
+            posterior = posterior.reshape(bs, height, width, self.n_classes) 
+            # [batch_size, height, width, n_classes] -> [batch_size,n_classes, height, width] 
+            posterior =  posterior.permute(0,3,1,2)            
+        
        
-        return torch.tensor(np.array(list(posterior)))
+        return posterior
     
 
 class SumUncertainty(torch.nn.Module):
@@ -179,6 +199,7 @@ class SumUncertainty(torch.nn.Module):
         assert alpha1.shape[1] == self.n_classes
         assert alpha2.shape[1] == self.n_classes
         
+        '''
         if 4 == alpha1.ndim:
             # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
             alpha1 = alpha1.permute(0,2,3,1)
@@ -186,6 +207,7 @@ class SumUncertainty(torch.nn.Module):
             # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
             alpha1 = alpha1.reshape(-1, self.n_classes) 
             alpha2 = alpha2.reshape(-1, self.n_classes) 
+         '''
             
         return alpha1 + alpha2
     
@@ -206,6 +228,7 @@ class MeanUncertainty(torch.nn.Module):
         assert alpha1.shape[1] == self.n_classes
         assert alpha2.shape[1] == self.n_classes
         
+        '''
         if 4 == alpha1.ndim:
             # [batch_size,n_classes, height, width] -> [batch_size, height, width, n_classes]
             alpha1 = alpha1.permute(0,2,3,1)
@@ -213,5 +236,6 @@ class MeanUncertainty(torch.nn.Module):
             # [batch_size, height, width, n_classes] -> [batch_size*height*width, n_classes]
             alpha1 = alpha1.reshape(-1, self.n_classes) 
             alpha2 = alpha2.reshape(-1, self.n_classes) 
+        '''
             
         return (alpha1 + alpha2)/2
