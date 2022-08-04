@@ -31,4 +31,30 @@ In this experiment we are looking at the tradeoff between accuracy and computati
     * https://github.com/mcordts/cityscapesScripts
 
 
-### 
+### Status
+1. Datasets:
+    - German traffic sign dataset
+    - Robocup blender 
+    - Virtual Kitti 
+2. Uncertainty
+    - Evidential loss
+3. Uncertainty fusion
+    - Dirchlet fusion
+    - Bayesian constructive fusion
+    - Dirchlet destructive fusion
+    - Sum fusion
+    - Mean fusion
+
+### Experiments
+1. GTSRB dataset
+    - Accuracy 93%
+    - Fusion increase minorly but for all
+    - When accuracy was less the fusion was not improving
+    - Uncertainty increases for both correct and worng prediction 
+
+2. Robocup dataset
+3. Virtual kitti
+    - Mobilenet small architecture
+    - accuracy is around 70 %
+    - Fusion reduces the accuracy
+    - 
