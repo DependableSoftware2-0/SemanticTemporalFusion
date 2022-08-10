@@ -61,45 +61,46 @@
         | OneD fusion       | .9289 |
     - Experiment to compare 1D and 2D convolution 
     - Results
+```
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
        Validate metric                 DataLoader 0
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-     FrequencyIoU/valid/0           0.8860907554626465
-     FrequencyIoU/valid/1           0.8861611485481262
-FrequencyIoU/valid/OneD_fusion      0.9062254428863525
-FrequencyIoU/valid/TwoD_fusion      0.8769735097885132
- FrequencyIoU/DS_combine            0.8712740540504456
-    FrequencyIoU/mean               0.8695641160011292
-    FrequencyIoU/sum                0.8695641160011292
+             FrequencyIoU/valid/0           0.8860907554626465
+             FrequencyIoU/valid/1           0.8861611485481262
+        FrequencyIoU/valid/OneD_fusion      0.9062254428863525
+        FrequencyIoU/valid/TwoD_fusion      0.8769735097885132
+         FrequencyIoU/DS_combine            0.8712740540504456
+            FrequencyIoU/mean               0.8695641160011292
+            FrequencyIoU/sum                0.8695641160011292
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-       iou/valid/0_iou              0.9201490879058838
-       iou/valid/1_iou              0.9200822114944458      
-  iou/valid/OneD_fusion_iou         0.9374560117721558
-  iou/valid/TwoD_fusion_iou         0.9278312921524048
-  val_iou/DS_combine_fusion         0.9205654859542847
-   val_iou/mean_fusion              0.9183549880981445
-   val_iou/sum_fusion               0.9183549880981445
+          iou/valid/0_iou              0.9201490879058838
+          iou/valid/1_iou              0.9200822114944458      
+          iou/valid/OneD_fusion_iou         0.9374560117721558
+          iou/valid/TwoD_fusion_iou         0.9278312921524048
+          val_iou/DS_combine_fusion         0.9205654859542847
+           val_iou/mean_fusion              0.9183549880981445
+           val_iou/sum_fusion               0.9183549880981445
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-     MeanIoU/DS_combine     0.8629774451255798
-      MeanIoU/mean          0.8613346815109253
-       MeanIoU/sum          0.8613346815109253
-      MeanIoU/val_0         0.8791393637657166
-      MeanIoU/val_1         0.8791835904121399
+         MeanIoU/DS_combine     0.8629774451255798
+          MeanIoU/mean          0.8613346815109253
+           MeanIoU/sum          0.8613346815109253
+          MeanIoU/val_0         0.8791393637657166
+          MeanIoU/val_1         0.8791835904121399
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-PixelAccuracy/DS_combine    0.9271551370620728
-   PixelAccuracy/mean       0.9260948896408081
-    PixelAccuracy/sum       0.9260948896408081
-   PixelAccuracy/val_0      0.9345839023590088
-   PixelAccuracy/val_1      0.9346224069595337
+        PixelAccuracy/DS_combine    0.9271551370620728
+           PixelAccuracy/mean       0.9260948896408081
+            PixelAccuracy/sum       0.9260948896408081
+           PixelAccuracy/val_0      0.9345839023590088
+           PixelAccuracy/val_1      0.9346224069595337
         
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
+```
         
 
