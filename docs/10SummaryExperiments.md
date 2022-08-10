@@ -1,26 +1,12 @@
 # Experiments Sumary
 
+* Wednesday Aug 10
+    - Training for 100 epochs. After 80 epochs the learning rate is high so the loss is alos high. 
+    - The epoch cycle are 10, 20, 30, 40. So at 100 the learning rate will be low 
+    - Next epoh will be 150 
+    - Results
 
-* Monday, Aug8 
-    - Training with only flip augmentation in cluster. Validation accuracy is higher than train accuracy in the begining
-    - Debug Script for training 1D fusion. After loading checkpoint validation is correct but after training val reduces even though we have freezed.
 
-* Sunday, Aug 7
-    - Training for 60 epochs 
-    - Clipped dirchlet loss function .
-    - Results:
-        |  metric           | value |
-        |-------------------|-------|
-        | train dataset IOU | .84   |
-        | train perimage iou| .84   |
-        |-------------------|-------|
-        | val iou           | .8539 |
-        | DS fusion         | .8582 |
-        | mean fusion       | .8563 |
-        | sum fusion        | .8563 |
-
-* Monday
-    - Debuging 1D fine tuning 
 
 * Tuesday 
     - 1D finetuning experiments 
@@ -102,5 +88,24 @@
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
+* Monday, Aug8 
+    - Training with only flip augmentation in cluster. Validation accuracy is higher than train accuracy in the begining
+    - Debug Script for training 1D fusion. After loading checkpoint validation is correct but after training val reduces even though we have freezed.
+
+* Sunday, Aug 7
+    - Training for 60 epochs 
+    - Clipped dirchlet loss function .
+    - Results:
+        |  metric           | value |
+        |-------------------|-------|
+        | train dataset IOU | .84   |
+        | train perimage iou| .84   |
+        |-------------------|-------|
+        | val iou           | .8539 |
+        | DS fusion         | .8582 |
+        | mean fusion       | .8563 |
+        | sum fusion        | .8563 |
+
+
         
 
