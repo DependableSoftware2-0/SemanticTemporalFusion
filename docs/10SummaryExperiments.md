@@ -42,4 +42,24 @@
 * Wednesday
     - Adding dice loss, frequencyiou for training, adding augmentation, for 80 peochs, also 1Dtraining for 6 epochs
     - Batch size 32 gave GPU error while we have used it continuously. maybe related to kornia augmentation. reduced to 16
-    - 
+    - The problem was with return 2 rad variables (dice loss ) in the return of the on_training_step 
+    - Results:
+        |  metric           | value |
+        |-------------------|-------|
+        | train dataset IOU | .84   |
+        | train perimage iou| .85   |
+        |-------------------|-------|
+        | val iou           | .925  |
+        | DS fusion         | .924  |
+        | mean fusion       | .922  |
+        | sum fusion        | .922  |
+        |---Frequency IOU---|-------|
+        | val               | .8947 |
+        | DS fusion         | .8758 |
+        | mean fusion       | .8738 |
+        | sum fusion        | .8738 |
+        | OneD fusion       | .9289 |
+    - Experiment to compare 1D and 2D convolution 
+    - Results
+        
+
