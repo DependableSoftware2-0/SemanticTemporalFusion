@@ -40,4 +40,6 @@
         | val 1d fusion     | .8881 |
 
 * Wednesday
+    - Adding dice loss, frequencyiou for training, adding augmentation, for 80 peochs, also 1Dtraining for 6 epochs
+    - Batch size 32 gave GPU error while we have used it continuously. maybe related to kornia augmentation. reduced to 16
     - 
