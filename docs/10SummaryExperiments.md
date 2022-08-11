@@ -2,7 +2,7 @@
 
 * Wednesday Aug 10
     - Validating all methods (1D, 2D convolution with cross entropy loss and 10 epochs)
-    - Results
+    - Results - 1D convolution is low . need to verify again
     
 |       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
 |----------------|--------|------|------|------------|----|-----|
