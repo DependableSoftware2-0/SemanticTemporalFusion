@@ -5,6 +5,13 @@
     - The epoch cycle are 10, 20, 30, 40. So at 100 the learning rate will be low 
     - Next epoh will be 150 
     - Results
+```
+   FrequencyIoU/val_0       0.8994248509407043
+   FrequencyIoU/val_1       0.8994248509407043
+        val_iou/0           0.9301660060882568
+        val_iou/1            0.929871141910553
+```
+    - Validating all methods
 
 
 
