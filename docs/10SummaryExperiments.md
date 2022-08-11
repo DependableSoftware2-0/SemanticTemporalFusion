@@ -1,6 +1,17 @@
 # Experiments Sumary
 
 * Wednesday Aug 10
+    - Validating all methods (1D, 2D convolution with cross entropy loss and 10 epochs)
+    - Results
+    
+|       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
+|----------------|--------|------|------|------------|----|-----|
+| Frequency IoU  | 0.8994   | 0.8760 | 0.8760 | 0.8718 | 0.6188 | **0.9008** |
+| Mean IoU       |0.8953   | 0.8698 | 0.8698 | 0.8718 | 0.6554 | **0.8965** |
+| Pixel Accuracy | 0.9433   | 0.9305 | 0.9305 | 0.9318 | 0.7211 | **0.9456** |
+| IoU            | 0.9298 | 0.9238 | 0.9238 | 0.9262 | 0.4544 | **0.9310** |
+    
+    
     - Training for 100 epochs. After 80 epochs the learning rate is high so the loss is alos high. 
     - The epoch cycle are 10, 20, 30, 40. So at 100 the learning rate will be low 
     - Next epoh will be 150 
@@ -11,7 +22,7 @@
         val_iou/0           0.9301660060882568
         val_iou/1            0.929871141910553
 ```
-    - Validating all methods (1D, 2D convolution with cross entropy loss and 10 epochs)
+    
 
 
 
