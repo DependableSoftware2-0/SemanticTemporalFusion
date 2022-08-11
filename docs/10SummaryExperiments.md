@@ -11,7 +11,7 @@
         val_iou/0           0.9301660060882568
         val_iou/1            0.929871141910553
 ```
-    - Validating all methods
+    - Validating all methods (1D, 2D convolution with cross entropy loss and 10 epochs)
 
 
 
