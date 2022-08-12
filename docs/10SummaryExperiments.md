@@ -1,5 +1,34 @@
 # Experiments Sumary
+* Friday Aug 13
+    - Robocup Training solved
+    - Vkitti with Regnext timm 
+    - Results: 
+    - Vkitti 1D 2D traiing 
+    - Vkitti training : encoders + normalization 
+        - Val 1 Mean Pixel Accuracy :    tensor(0.8630, device='cuda:0')
+        - Mean Pixel Accuracy DS_combine tensor(**0.8742**, device='cuda:0')
+        - Mean Pixel Accuracy mean       tensor(0.8737, device='cuda:0')
+        - Mean Pixel Accuracy sum        tensor(0.8737, device='cuda:0')
 
+        - Val 1 IoU Per class :    tensor([**0.5984**, 0.9026, **0.9170**, 0.8316, 0.7134, **0.9354**, 0.7088],
+        - IoU Per class DS_combine tensor([0.5860, **0.9032**, 0.9108, **0.8417**, **0.7348**, 0.9292, **0.7387**],
+        - IoU Per class mean       tensor([0.5840, 0.9022, 0.9102, 0.8412, 0.7345, 0.9287, 0.7384],
+        - IoU Per class sum        tensor([0.5840, 0.9022, 0.9102, 0.8412, 0.7345, 0.9287, 0.7384],
+
+        - Class Pixel Accuracy DS_combine tensor([0.8105, 0.9355, 0.9404, 0.8881, 0.7890, 0.9734, 0.7823],
+        - Class Pixel Accuracy mean       tensor([0.8084, 0.9351, 0.9402, 0.8878, 0.7889, 0.9732, 0.7822],
+        - Class Pixel Accuracy sum        tensor([0.8084, 0.9351, 0.9402, 0.8878, 0.7889, 0.9732, 0.7822],
+
+|       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
+|----------------|--------|------|------|------------|----|-----|
+| Frequency IoU  | 0.8259   | 0.8262 | 0.8262 | 0.8270 |  | 0. |
+| Mean IoU       |0.8010   | 0.8056 | 0.8056 | 0.8063 |  | 0. |
+| Pixel Accuracy | 0.8944   | 0.8973 | 0.8973 | 0.8979 | **0.** | 0. |
+| IoU            | 0.8560 | 0.8580 | 0.8580 | 0.8586 | **0.** | 0. |
+
+* Thursday Aug 11
+    - Robocup Training
+    - R
 * Wednesday Aug 10
     - Validating all methods (1D, 2D convolution with cross entropy loss and 10 epochs)
     - Results - 1D convolution is low . need to verify again
