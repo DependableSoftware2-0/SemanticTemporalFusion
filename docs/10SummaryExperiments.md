@@ -3,7 +3,7 @@
     - Robocup Training solved
     - Vkitti with Regnext timm 
     - Results: 
-    - Vkitti 1D 2D traiing 
+    - Vkitti 1D 2D traiing  (vkitti483087.out , )
 
 
 
