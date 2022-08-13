@@ -3,8 +3,46 @@
     - Robocup Training solved
     - Vkitti with Regnext timm 
     - Results: 
-    - Vkitti 1D 2D traiing  (vkitti483087.out , )
+Val 1 Mean Pixel Accuracy : tensor(0.8980, device='cuda:0')
+Val 1 IoU Per class : tensor([0.6450, 0.8918, 0.9494, 0.8469, 0.7718, 0.9321, 0.8079],
+Class Pixel Accuracy DS_combine tensor([0.7632, 0.9378, 0.9639, 0.9083, 0.8529, 0.9635, 0.8942],
+Mean Pixel Accuracy DS_combine tensor(0.8977, device='cuda:0')
+IoU Per class DS_combine tensor([0.6051, 0.8868, 0.9289, 0.8497, 0.7710, 0.9234, 0.7917],
+Class Pixel Accuracy mean tensor([0.7601, 0.9374, 0.9634, 0.9079, 0.8527, 0.9634, 0.8941],
+Mean Pixel Accuracy mean tensor(0.8970, device='cuda:0')
+IoU Per class mean tensor([0.6019, 0.8856, 0.9276, 0.8490, 0.7702, 0.9225, 0.7911],
+Class Pixel Accuracy sum tensor([0.7601, 0.9374, 0.9634, 0.9079, 0.8527, 0.9634, 0.8941],
+Mean Pixel Accuracy sum tensor(0.8970, device='cuda:0')
+IoU Per class sum tensor([0.6019, 0.8856, 0.9276, 0.8490, 0.7702, 0.9225, 0.7911],
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+     Validate metric           DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ FrequencyIoU/DS_combine    0.8356583118438721
+    FrequencyIoU/mean       0.8344047665596008
+    FrequencyIoU/sum        0.8344047665596008
+   FrequencyIoU/val_0       0.8478740453720093
+   FrequencyIoU/val_1       0.8478740453720093
+   MeanIoU/DS_combine       0.8223580121994019
+      MeanIoU/mean          0.8211453557014465
+       MeanIoU/sum          0.8211453557014465
+      MeanIoU/val_0         0.8348969221115112
+      MeanIoU/val_1          0.835002601146698
+PixelAccuracy/DS_combine    0.9058631062507629
+   PixelAccuracy/mean       0.9050689339637756
+    PixelAccuracy/sum       0.9050689339637756
+   PixelAccuracy/val_0       0.911279022693634
+   PixelAccuracy/val_1      0.9113519191741943
+     val_1/Max val 1        165.34812927246094
+     val_1/Min val 1                1.0
+       val_1/val 1           9.204792022705078
+        val_iou/0           0.8953044414520264
+        val_iou/1           0.8943599462509155
+val_iou/DS_combine_fusion   0.8876065015792847
+   val_iou/mean_fusion      0.8861864805221558
+   val_iou/sum_fusion       0.8861864805221558
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
+    - Vkitti 1D 2D traiing  (vkitti483087.out , )
 
 
 
