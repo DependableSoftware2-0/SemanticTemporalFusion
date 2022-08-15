@@ -1,6 +1,18 @@
 # Experiments Sumary
 * Friday Aug 13
     - Robocup Training solved
+    - Result Robocup only single image training . Validation on sequence todo
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+     Validate metric           DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FrequencyIoU/valid       0.7870792746543884
+    valid/dataset_iou       0.7902564406394958
+     valid/dice_los         0.20299935340881348
+  valid/evidential_loss     0.8104310631752014
+   valid/per_image_iou      0.7937226295471191
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
     - Vkitti with Regnext timm 
     - Results: 
 Val 1 Mean Pixel Accuracy : tensor(0.8980, device='cuda:0')
