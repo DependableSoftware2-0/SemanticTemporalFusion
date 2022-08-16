@@ -15,6 +15,7 @@
 
     - Vkitti with Regnext timm 
     - Results: Something worng with 1D fusion debug
+    
 |       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
 |----------------|--------|------|------|------------|----|-----|
 | Frequency IoU  | 0.8478 | 0.8344 | 0.8344 | 0.8356 |0.7515  | **0.8518** |
