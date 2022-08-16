@@ -1,4 +1,13 @@
 # Experiments Sumary
+* Tuesday Aug 16
+    - Single script for training(model,1D and 2D) and validation and plotting
+    - Robocup Training and validation done
+    - 1D has problem 
+    - Plotting of prediction - looks good
+
+
+* Monday Aug 15
+    - Single script for training model,1D,2D and validating
 * Friday Aug 13
     - Robocup Training solved
     - Result Robocup only single image training . Validation on sequence todo
