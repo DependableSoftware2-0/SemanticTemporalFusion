@@ -14,7 +14,8 @@
 | Pixel Accuracy | 0.9875 | 0.9858 | 0.9858 | 0.9859 | 0.9645 | **0.9598** |
 | IoU            | **0.9810** | 0.9778 | 0.9778 | 0.9779 | 0.9393 | 0.8885 |
 
-
+    - Training vkitti efficientnet 100 epochs with 10 epcoh for fuion with crossentropy
+    
     
 * Tuesday Aug 16
     - Single script for training(model,1D and 2D) and validation and plotting
