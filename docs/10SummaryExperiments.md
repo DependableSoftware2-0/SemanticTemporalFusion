@@ -1,4 +1,21 @@
 # Experiments Sumary
+* Wednesday Aug 17
+    - Training vkitti with efficient net . - Result bug after 9 hrs
+    - Robocup Efficientnet - 130 epochs
+    - Fusion behaving strange - 1 class is goes to 0% after fusion 
+    - with evidential loss for fusion 
+    - Also the case that after 99 accuracy the fusion deteriots
+
+
+|       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
+|----------------|--------|------|------|------------|----|-----|
+| Frequency IoU  | 0.9794 | 0.9740 | 0.9740 | 0.9741 |0.9341  | **0.9215** |
+| Mean IoU       | 0.8487 | 0.8342 | 0.8342 | 0.8350 |0.5007  | **0.6825** |
+| Pixel Accuracy | 0.9875 | 0.9858 | 0.9858 | 0.9859 | 0.9645 | **0.9598** |
+| IoU            | **0.9810** | 0.9778 | 0.9778 | 0.9779 | 0.9393 | 0.8885 |
+
+
+    
 * Tuesday Aug 16
     - Single script for training(model,1D and 2D) and validation and plotting
     - Robocup Training and validation done
