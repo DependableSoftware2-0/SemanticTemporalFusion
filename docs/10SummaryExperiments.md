@@ -1,4 +1,4 @@
-# Experiments Sumary
+# Experiments Summary
 * Wednesday Aug 17
     - Training vkitti with efficient net . - Result bug after 9 hrs
     - Robocup Efficientnet - 130 epochs
@@ -14,7 +14,7 @@
 | Pixel Accuracy | **0.9875** | 0.9858 | 0.9858 | 0.9859 | 0.9645 | 0.9598 |
 | IoU            | **0.9810** | 0.9778 | 0.9778 | 0.9779 | 0.9393 | 0.8885 |
 
-    - Training vkitti efficientnet 100 epochs with 10 epcoh for fusion with crossentropy
+    - Training vkitti efficientnet 100 epochs with 10 epcoh for fusion with crossentropy - 483325
         - 1D gives better results
         - 2D fusion is less ??????  should we train more
 
