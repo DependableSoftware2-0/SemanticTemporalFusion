@@ -14,7 +14,18 @@
 | Pixel Accuracy | 0.9875 | 0.9858 | 0.9858 | 0.9859 | 0.9645 | **0.9598** |
 | IoU            | **0.9810** | 0.9778 | 0.9778 | 0.9779 | 0.9393 | 0.8885 |
 
-    - Training vkitti efficientnet 100 epochs with 10 epcoh for fuion with crossentropy
+    - Training vkitti efficientnet 100 epochs with 10 epcoh for fusion with crossentropy
+        - 1D gives better results
+        - 2D fusion is less ??????  should we train more
+
+|       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
+|----------------|--------|------|------|------------|----|-----|
+| Frequency IoU  | 0.8986 | 0.8752 | 0.8752 | 0.8772 | **0.9147** | 0.8805 |
+| Mean IoU       | 0.8938 | 0.8683 | 0.8683 | 0.8702 | **0.9099** | 0.8763 |
+| Pixel Accuracy | 0.9426 | 0.9298 | 0.9298 | 0.9859 | **0.9536** | 0.9324 |
+| IoU            | 0.9336 | 0.9223 | 0.9223 | 0.9779 | **0.9447** | 0.9338 |
+
+
     
     
 * Tuesday Aug 16
