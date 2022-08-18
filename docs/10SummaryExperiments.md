@@ -1,4 +1,8 @@
 # Experiments Summary
+* Thursday Aug 18
+    - Debugging Robocup above 95 accuracy fusion degradation problem
+    - While training do extra validation and check regions when fusion is bad
+    - 
 * Wednesday Aug 17
     - Training vkitti with efficient net . - Result bug after 9 hrs
     - Robocup Efficientnet - 130 epochs
