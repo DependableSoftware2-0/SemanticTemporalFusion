@@ -2,6 +2,7 @@
 * Thursday Aug 18
     - Debugging Robocup above 95 accuracy fusion degradation problem
     - While training do extra validation and check regions when fusion is bad
+    - Exp 483331 = train robocup effificentnet 130 epochs with validation called every 10 epochs. Compare val and fusion output while training.
     - 
 * Wednesday Aug 17
     - Training vkitti with efficient net . - Result bug after 9 hrs
@@ -29,7 +30,7 @@
 | Pixel Accuracy | 0.9426 | 0.9298 | 0.9298 | 0.9859 | **0.9536** | 0.9324 |
 | IoU            | 0.9336 | 0.9223 | 0.9223 | 0.9779 | **0.9447** | 0.9338 |
 
-
+    - Increasing vkitti fusion training time for 1D and 2D fusion - run 483330 : to check whether 2d fusion improves
     
     
 * Tuesday Aug 16
