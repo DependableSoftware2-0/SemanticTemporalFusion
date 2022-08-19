@@ -1,4 +1,6 @@
 # Experiments Summary
+TODO : check with robocup - Does old prediction have less confidence than new prediction
+
 * Friday Aug 19
     - Train robocup with mobilnet. fusion with cross entropy loss 10 epochs - 483385
     - Results 
@@ -26,7 +28,6 @@
     - Training vkitti efficientnet 100 epochs with 10 epcoh for fusion with crossentropy - 483325
         - 1D gives better results
         - 2D fusion is less ??????  should we train more
-        
 
 |       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
 |----------------|--------|------|------|------------|----|-----|
@@ -47,8 +48,13 @@
 | IoU            | 0.9336 | 0.7948 | 0.9353 |
 
     - Re-running 1D , 2D fusion again. with model trained with 483325 . -> 483384
-    - Results : ?
-
+    - Results : Degraded again . Cannot reproduce results from run 1
+|       =        | val_1  | 1D | 2D  |
+|----------------|--------|----|-----|
+| Frequency IoU  | 0.8986 | 0.7003 | 0.8905 |
+| Mean IoU       | 0.8938 | 0.7427 | 0.8740 |
+| Pixel Accuracy | 0.9426 | 0.7935 | 0.9386 |
+| IoU            | 0.9336 | 0.9193 | 0.9347 |
     
 * Tuesday Aug 16
     - Single script for training(model,1D and 2D) and validation and plotting
