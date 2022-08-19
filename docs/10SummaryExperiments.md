@@ -21,6 +21,7 @@
     - Training vkitti efficientnet 100 epochs with 10 epcoh for fusion with crossentropy - 483325
         - 1D gives better results
         - 2D fusion is less ??????  should we train more
+        
 
 |       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
 |----------------|--------|------|------|------------|----|-----|
@@ -30,7 +31,16 @@
 | IoU            | 0.9336 | 0.9223 | 0.9223 | 0.9779 | **0.9447** | 0.9338 |
 
     - Increasing vkitti fusion training time for 1D and 2D fusion - run 483330 : to check whether 2d fusion improves
-    
+    - Result : No Fusion detiorates for both fusion After 20 epochs 
+    - Why we cant reproduce result from above
+
+|       =        | val_1  | 1D | 2D  |
+|----------------|--------|----|-----|
+| Frequency IoU  | 0.8986 | 0.8236 | 0.8639 |
+| Mean IoU       | 0.8938 | 0.8450 | 0.7783 |
+| Pixel Accuracy | 0.9426 | 0.8925 | 0.9213 |
+| IoU            | 0.9336 | 0.7948 | 0.9353 |
+
     
 * Tuesday Aug 16
     - Single script for training(model,1D and 2D) and validation and plotting
