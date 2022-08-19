@@ -1,6 +1,14 @@
 # Experiments Summary
 TODO : check with robocup - Does old prediction have less confidence than new prediction
 
+## Tracker
+|   | robocup | vkitti |
+|---|---------|--------|
+| resnet18 |    |    |
+| efficientnet | ✔️   | ✔️   |
+| mobilenet |  ✔️  |    |
+
+
 * Friday Aug 19
     - Train robocup with mobilnet. fusion with cross entropy loss 10 epochs - 483385
     - Results 
