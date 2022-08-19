@@ -6,8 +6,9 @@
 * Bigger the size of the network better the performance of the network.
 * Autonomous systems especially robots are embedded devices and have limited resources.
 * The DNN which are deployed on autonomous systems have constraints of the resources from the system.
-* The limited resources have a limit on the size of the network and hence will produce sub-par performance.
-* As the DNN outputs are used for making autonomous decisions the performance degradation in the DNN will lead
+* Mostly in autonomous systems efficient model size reduction methods are applied for example: pruning, mixed precision and knowledge distilation.
+* The limited resources causes limited models and they have a limit on the size of the network and hence will produce sub-par performance.
+* As the DNN outputs are used for making autonomous decisions, the performance degradation in the DNN will lead
 to catastropic failure in the system.
 * Different methodology has been proposed to improve the performance of DNN in constrained enviroments:
    * Architecture modifications ?
@@ -17,12 +18,13 @@ to catastropic failure in the system.
    * output fusion 
 
 ![How deeplearning used for video ](https://static.wixstatic.com/media/226638_85aaca247fe14b4f8222ccba3e20e135~mv2.png/v1/fill/w_512,h_196,al_c,q_85,enc_auto/frames-fusion.png) https://www.ridgerun.com/video-based-ai
-* Even though atonomnous systems are constrined by the hardware limitations they have an advantage that they
+* Even though autonomnous systems are constrined by the hardware limitations they have an advantage that they
 are embodied agents.
 * The embodiement of the agent can be used to overcome the limitation.
 * The embodiement of the agent has an advantage that the agents can move around and collect more information
-Thus they dont need to make decision based on single source of data.
-* The different sources of data now can fused to make a 
+Thus they dont need to make decision based on single data.
+* The different sources of data now can fused to make a decision.
+* In fusion, data fusion is the most popular method, but using data fusion further increases the computation. 
 * In this work, we focus on the task of semantic segmentation with DNN. Our goal is to improve the performance of 
 semantic segmentation with minimum increase of computation by exploiting the embodiment and the redundancy of information.
 * We propose to use Multi-View geometry and semantic fusion
