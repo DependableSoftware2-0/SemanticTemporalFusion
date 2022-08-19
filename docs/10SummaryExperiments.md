@@ -41,6 +41,9 @@
 | Pixel Accuracy | 0.9426 | 0.8925 | 0.9213 |
 | IoU            | 0.9336 | 0.7948 | 0.9353 |
 
+    - Re-running 1D , 2D fusion again. with model trained with 483325 . -> 483384
+    - Results : ?
+
     
 * Tuesday Aug 16
     - Single script for training(model,1D and 2D) and validation and plotting
