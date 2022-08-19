@@ -4,9 +4,9 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 ## Tracker
 |   | robocup | vkitti |
 |---|---------|--------|
-| resnet18 |    |    |
-| efficientnet | ✔️   | ✔️   |
-| mobilenet |  ✔️  |    |
+| resnet18 | ⏳ 483396   | ⏳   483395  |
+| efficientnet | ✔️   | ✔️ 483325  |
+| mobilenet |  ✔️ 483385  |    |
 
 
 * Friday Aug 19
