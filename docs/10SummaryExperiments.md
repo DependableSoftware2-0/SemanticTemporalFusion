@@ -1,4 +1,9 @@
 # Experiments Summary
+* Friday Aug 19
+    - Train robocup with mobilnet. fusion with cross entropy loss 10 epochs - 483385
+    - Results 
+
+
 * Thursday Aug 18
     - Debugging Robocup above 95 accuracy fusion degradation problem
     - While training do extra validation and check regions when fusion is bad
