@@ -10,6 +10,7 @@
 * The limited resources causes limited models and they have a limit on the size of the network and hence will produce sub-par performance.
 * As the DNN outputs are used for making autonomous decisions, the performance degradation in the DNN will lead
 to catastropic failure in the system.
+* ToDo : Importance of uncertainty. 
 * Different methodology has been proposed to improve the performance of DNN in constrained enviroments:
    * Architecture modifications ?
    * Training modifications
