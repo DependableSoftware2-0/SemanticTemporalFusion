@@ -2,15 +2,14 @@
 * Thursday Aug 18
     - Debugging Robocup above 95 accuracy fusion degradation problem
     - While training do extra validation and check regions when fusion is bad
-    - Exp 483331 = train robocup effificentnet 130 epochs with validation called every 10 epochs. Compare val and fusion output while training.
-    - 
+    - Exp 483333 = train robocup effificentnet 130 epochs with validation called every 10 epochs. Compare val and fusion output while training.
+    - Fusion with evidential loss doesnt train 1D and 2D
+    - Fusion with crossentropy loss 1D is not converging. 2D is fusing  - 483357
 * Wednesday Aug 17
     - Training vkitti with efficient net . - Result bug after 9 hrs
     - Robocup Efficientnet - 130 epochs
-    - Fusion behaving strange - 1 class is goes to 0% after fusion 
-    - with evidential loss for fusion 
-    - Also the case that after 99 accuracy the fusion deteriots
-
+    - Fusion behaving strange - 1 class is goes to 0% after fusion with evidential loss for fusion 
+    - Mayve the case that after 95% accuracy the fusion deteriots
 
 |       =        | val_1  | sum  | mean | ds_combine | 1D | 2D  |
 |----------------|--------|------|------|------------|----|-----|
