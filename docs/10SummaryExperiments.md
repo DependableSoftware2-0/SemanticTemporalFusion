@@ -4,13 +4,13 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 ## Tracker
 |   | robocup | vkitti |
 |---|---------|--------|
-| resnet18 | ⏳ 483396   | ⏳   483395  |
-| efficientnet | ✔️   | ✔️ 483325  |
-| mobilenet |  ✔️ 483385  |    |
+| resnet18 | ✔️ 483396   | ✔️   483395  |
+| efficientnet | ✔️  483325 | ✔️ 483325  |
+| mobilenet |  ✔️ 483385  | ⏳ 483411   |
 
 
 * Friday Aug 19
-    - Train robocup with mobilnet. fusion with cross entropy loss 10 epochs - 483385
+    - Train robocup with mobilenet. fusion with cross entropy loss 10 epochs - 483385
     - Results 
 
 
