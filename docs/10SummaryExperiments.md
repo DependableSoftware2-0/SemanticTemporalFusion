@@ -6,7 +6,7 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 |---|---------|--------|
 | resnet18 | ✔️ 483396   | ✔️   483395  |
 | efficientnet | ✔️  483325 | ✔️ 483325  |
-| mobilenet |  ✔️ 483385  | ⏳ 483411   |
+| mobilenet |  ✔️ 483385 ⏳ 483412 | ⏳ 483411   |
 
 
 * Friday Aug 19
