@@ -5,9 +5,13 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 |   | robocup | vkitti |
 |---|---------|--------|
 | resnet18 | ✔️ 483396   | ✔️   483395  |
-| efficientnet | ✔️  483325 | ✔️ 483325  |
+| efficientnet | ✔️  483333 | ✔️ 483325  |
 | mobilenet |  ✔️ 483385 ⏳ 483412 | ⏳ 483411   |
 
+* Thursday Aug 15
+    - Debugging Robocup fusion 
+    - Problem with weight initialization of conv2D
+    - mobilenet improves
 
 * Friday Aug 19
     - Train robocup with mobilenet. fusion with cross entropy loss 10 epochs - 483385
