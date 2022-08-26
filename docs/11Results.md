@@ -135,7 +135,7 @@
 <td align="right"><strong>0.9650</strong></td>
 <td align="right">0.9593</td>
 <td align="right">0.9595</td>
-<td align="right">0.9547</td>
+<td align="right"><strong>0.9646</strong></td>
 <td align="right"><strong>0.9640</strong></td>
 </tr>
 <tr>
@@ -143,15 +143,15 @@
 <td align="right">0.7330</td>
 <td align="right">0.7183</td>
 <td align="right">0.7193</td>
-<td align="right">0.6712</td>
-<td align="right"><strong>0.7427</strong></td>
+<td align="right"><strong>0.7430</strong></td>
+<td align="right">0.7427</td>
 </tr>
 <tr>
 <td align="left">Pixel Accuracy</td>
 <td align="right">0.9773</td>
 <td align="right">0.9752</td>
 <td align="right">0.9754</td>
-<td align="right">0.9716</td>
+<td align="right"><strong>0.9790</strong></td>
 <td align="right"><strong>0.9789</strong></td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@
 <td align="right">0.9697</td>
 <td align="right">0.9717</td>
 <td align="right"><strong>0.9722</strong></td>
-<td align="right">0.9331</td>
+<td align="right"><strong>0.9721</strong></td>
 <td align="right">0.9526</td>
 </tr>
 <tr>
@@ -198,44 +198,36 @@
 <tr>
 <td rowspan="4" align="left">mobilenet</td>
 <td align="left">FrequenyIoU</td>
-<td align="right"><strong>0.9542</strong></td>
+<td align="right">0.9498</td>
 <td align="right">0.9466</td>
 <td align="right">0.9467</td>
-<td align="right"><span style="color: #c9211e;">0.8304</span></td>
-<td align="right">0.9488</td>
+<td align="right">0.9532</td>
+<td align="right"><strong>0.9582</strong></td>
 </tr>
 <tr>
 <td align="left">Mean IoU</td>
-<td align="right"><strong>0.6826</strong></td>
+<td align="right">0.6826</td>
 <td align="right">0.6608</td>
 <td align="right">0.6614</td>
-<td align="right"><span style="color: #c9211e;">0.1710</span></td>
-<td align="right">0.6491</td>
+<td align="right">0.6783</td>
+<td align="right"><strong>0.7020</strong></td>
 </tr>
 <tr>
 <td align="left">Pixel Accuracy</td>
-<td align="right"><strong>0.9710</strong></td>
+<td align="right">0.9710</td>
 <td align="right">0.9675</td>
 <td align="right">0.9676</td>
-<td align="right"><span style="color: #c9211e;">0.8527</span></td>
-<td align="right"><strong>0.9721</strong></td>
+<td align="right">0.9717</td>
+<td align="right"><strong>0.9755</strong></td>
 </tr>
 <tr>
 <td align="left">IoU</td>
-<td align="right"><strong>0.9555</strong></td>
+<td align="right">0.9424</td>
 <td align="right">0.9531</td>
 <td align="right">0.9532</td>
-<td align="right"><span style="color: #c9211e;">0.7315</span></td>
-<td align="right">0.9415</td>
+<td align="right">0.9471</td>
+<td align="right"><strong>0.9498</strong></td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-    <td>0.9555</td>
-    <td>0.9531</td>
-    <td>0.9532</td>
-    <td>0.7315</td>
-    <td>0.9415</td>
-  </tr>
-</thead>
-</table>
