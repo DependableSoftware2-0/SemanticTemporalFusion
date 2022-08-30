@@ -9,6 +9,15 @@
     - Measures of uncertainty
     - Methods for constructing belief functions from data
     - [Example of fusion with IRIS Dataset](http://bennycheung.github.io/dempster-shafer-theory-for-classification)
+    - [https://www.aaai.org/AAAI22Papers/AAAI-11669.LiuW.pdf](Dirichlet fusion paper with code we are using)
+        - Uses same evidetial loss function
+        - with multiview datasets
+        - g0od future work can be to show how fusion network performs better with these
+        - Theory explanation and evidential explanation
+        - https://github.com/hanmenghan/TMC/tree/main/TMC%20ICLR 
+        - They loss function is combined (individual per frame loss + fusion o/p loss)
+1a. Yagger fusion 
+    - [https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9341308&casa_token=EfSK0q4lJB8AAAAA:0KPdDpxxeMnFkvFeessfV-gPnDp0cCvYkY5WB6ypFhnBE52P5VYuRFgNeHnA_jeQeYe0FIVgn80&tag=1](Yager and Damspster combining)
 
 2. Fusion with the efprob we had 
     - Use the Confusion matrix for Prior and 
