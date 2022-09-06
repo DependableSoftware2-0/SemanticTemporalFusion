@@ -11,6 +11,8 @@ In [6] for the task of 6D pose estimation they have used fusion of the uncertain
 
 In [7] is our multiview - without poses, use both images while training, wihle testing . Uncertainty estimation, Dirichlet fusion . 
 
+in [9] The system calculates three types of information: 1) a point cloud representation of all the surfaces in thescene, for the purpose of obstacle avoidance; 2) the rough pose of unknown objects from categories corresponding to primitive shapes (e.g., cuboids and cylinders); and 3) full 6-DoF pose
+of known objects. 
 
 
 ### Other comparison
@@ -32,6 +34,7 @@ Multi-view with pose vs multi-view stereo fusion
 * [8] Douglas Morrison1, Peter Corke1 and J ̈urgen Leitner1 Multi-View Picking: Next-best-view Reaching for Improved Grasping in Clutter
      - Network learns to find next best view to pick 
      - Required for the argument on why robots eed this multi view solution 
+ * [9] Multi-View Fusion for Multi-Level Robotic Scene Understanding Yunzhi Lin1,
 
 ## Datasets
 | Paper  | Datasets  | Pose  |   |   |
