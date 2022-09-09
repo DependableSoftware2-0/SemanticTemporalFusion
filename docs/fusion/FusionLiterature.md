@@ -35,4 +35,5 @@
 5. Subjective logic fusion
     - https://github.com/joseoliveirajr/subjective-logic-library/blob/master/%5B2022-01-20%5D.ipynb
     - Has implemented 3 fusion : cumulative, averaging and weighted 
-    - from SubjectiveLogic.BeliefFusion import cumulative_fusion, averaging_fusion, weighted_fusion
+    - from SubjectiveLogic.BeliefFusion import cumulative_fusion, averaging_fusion, weighted_fusion7
+    - https://confcats_isif.s3.amazonaws.com/web-files/journals/entries/Categories%20of%20belief%20fusion.pdf
