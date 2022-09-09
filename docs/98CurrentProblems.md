@@ -7,8 +7,13 @@
     - We need a strong baseline.
     - some other fusion method who claim to perform better on a task.
 
-2. Dataset is limited 
+2. Real world dataset or task
+
+3. Dataset is limited 
     - Semantic segmentation all papers are eith cityscapes, kitti or scannet
     - Need to do other dataset
     - For example = BOP datasets
-
+4. Fusion method is not extensive
+    - other subjective fusion
+    - RNN, LSTM, 
+    - Bayesian fusion
