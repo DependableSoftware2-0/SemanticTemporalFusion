@@ -32,3 +32,7 @@
     - Convd LSTM fusion 
     - https://github.com/sladewinter/ConvLSTM/blob/master/ConvLSTM.py
     - 
+5. Subjective logic fusion
+    - https://github.com/joseoliveirajr/subjective-logic-library/blob/master/%5B2022-01-20%5D.ipynb
+    - Has implemented 3 fusion : cumulative, averaging and weighted 
+    - from SubjectiveLogic.BeliefFusion import cumulative_fusion, averaging_fusion, weighted_fusion
