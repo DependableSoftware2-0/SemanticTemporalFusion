@@ -16,11 +16,16 @@
   - No code available 
   - 
 
-3. Nosiy-or fusion 
+3. Other Fusions
+  - **subjective logiv fusion**
+  - https://github.com/joseoliveirajr/subjective-logic-library/blob/master/%5B2022-01-20%5D.ipynb
+  - **Nosiy-or fusion** 
   - https://nikosuenderhauf.github.io/roboticvisionchallenges/assets/papers/IROS19/tian.pdf
   - Fuses multimodal uncertainty with noisy-or fusion 
   -   [outputs = 1 - (1 - mean["rgb"]) * (1 - mean["d"]) #[batch,11,512,512]](https://github.com/GT-RIPL/UNO-IC/blob/6a95f2c6bc52ad80bfb1da53fd046a3d4db310d0/segmentation/ptsemseg/core/core.py#L37)
-  - 
+
+
+
 
 4. Dataset
   - Kitti has odometry/ego motion
