@@ -4,9 +4,14 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 ## Tracker
 |   | robocup | vkitti |
 |---|---------|--------|
-| resnet18 | ✔️ 483396   | ✔️   483395  |
-| efficientnet | ✔️  483333 | ✔️ 483325  |
+| resnet18 | ✔️ 483396   | ✔️   483395 ⏳ 485512 |
+| efficientnet | ✔️  483333 ⏳ 485513| ✔️ 483325  |
 | mobilenet |  ✔️ 483385 ✔️ 483412 |  ✔️  483411   |
+
+* Saturday, Sept 10 
+    - Running after writing brake 
+    - Executing vkitti resent18 (485512) with the updated code to check if 1D fusion is working as per other .
+    - Executing resenet efficientnet (485513) to test efficientnet also improves fusion like other
 * Sunday Aug 20
     - vkitti mobilenet 48311 trained 
     - 1D fusion is better performing
