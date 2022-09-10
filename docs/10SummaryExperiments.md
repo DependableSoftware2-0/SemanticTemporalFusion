@@ -6,10 +6,12 @@ TODO : check with robocup - Does old prediction have less confidence than new pr
 |---|---------|--------|
 | resnet18 | ✔️ 483396   | ✔️   483395  |
 | efficientnet | ✔️  483333 | ✔️ 483325  |
-| mobilenet |  ✔️ 483385 ⏳ 483412 |  ✔️  483411   |
+| mobilenet |  ✔️ 483385 ✔️ 483412 |  ✔️  483411   |
 * Sunday Aug 20
     - vkitti mobilenet 48311 trained 
     - 1D fusion is better performing
+    - Robocup mobilenet 4834122 trained
+    - 1D/2D fusion performing bad .  483385 is good 
     
 
 * Thursday Aug 15
