@@ -17,3 +17,9 @@
     - other subjective fusion
     - RNN, LSTM, 
     - Bayesian fusion
+        * Multiplication likelihood formula
+        * using the prior from confusion matrix
+5. One usecase one message
+    - Create new dataset and task
+    - Given camera extrinsic, intrinsic and segment a video frame with fixed model size
+   
