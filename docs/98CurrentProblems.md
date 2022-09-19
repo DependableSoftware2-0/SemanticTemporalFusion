@@ -22,4 +22,7 @@
 5. One usecase one message
     - Create new dataset and task
     - Given camera extrinsic, intrinsic and segment a video frame with fixed model size
+
+6. Why fusion with evidential loss is not converging ?
+    - Currently we are using cross entropy loss to fuse the 2 uncertainty. 
    
