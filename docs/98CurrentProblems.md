@@ -25,4 +25,10 @@
 
 6. Why fusion with evidential loss is not converging ?
     - Currently we are using cross entropy loss to fuse the 2 uncertainty. 
+
+7. Uncertainty estimation methods?
+    - other deterministic uncertainty estimation methods
+    - Laplace approximation BDD
+    - evidential, dropout
+    - other deterministric uncertatiny estimation methods
    
