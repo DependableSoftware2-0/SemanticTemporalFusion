@@ -1,0 +1,10 @@
+# Hope Dataset
+
+1. https://github.com/swtyree/hope-dataset#objects
+2. Downloaded and checked
+    - It has video and camera pose 
+    - https://drive.google.com/drive/folders/1Hj5K9RIdcNxBFiU8qG0-oL3Ryd9f2gOY
+    
+4. Paper using this dataset 
+    - https://arxiv.org/pdf/2103.13539.pdf 
+    - Multi-View Fusion for Multi-Level Robotic Scene Understanding
