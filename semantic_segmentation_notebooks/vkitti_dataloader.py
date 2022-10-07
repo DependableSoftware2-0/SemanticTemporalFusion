@@ -216,16 +216,134 @@ class SequentialImageVirtualKittiDataset(torch.utils.data.Dataset):
                             
         print( "Found {:d} 2 single images sequences".format(len(seq_filenames)))
                             
-        #if self.mode == "train":  # 90% for train
-        #    seq_filenames_idx = np.random.choice(len(seq_filenames), int(0.6*len(seq_filenames)), replace=False)           
-        #elif self.mode =="valid":
-        #    seq_filenames_idx = np.random.choice(len(seq_filenames), int(0.4*len(seq_filenames)), replace=False)
-        #    print (seq_filenames_idx)
-        #else:
-        #    seq_filenames_idx = []
-
-        #print ("Selecting {:d} two image sequences for mode {:s}".format(len(seq_filenames_idx), self.mode))
-        #seq_filenames = [e for i, e in enumerate(seq_filenames) if i in seq_filenames_idx]
         print ("Selecting {:d} two image sequences for mode {:s}".format(len(seq_filenames), self.mode))
         return seq_filenames
+
+
+class SingleImageVirtualKittiDataset(torch.utils.data.Dataset):
+    def __init__(
+        self, 
+        root: str, 
+        mode: str = "train", 
+        transforms = None):
+
+        assert mode in {"train", "valid", "test"}
+        
+        self.mode = mode
+        self.transforms = transforms
+
+        self.files_directory = root
+  
+        self.data_column_names=['scene', 'scenario', 'camera_number', 'frame_number', 'extrinsic']
+        #if you want a subset of the data
+        self.subset = ['15-deg-left', '15-deg-right', '30-deg-left', '30-deg-right','clone', 'fog']
+        self.val_subset = ['morning', 'overcast', 'rain', 'sunset']
+        
+        #Filenames extracted as a pandas dataframe
+        self.filenames = self._read_split()  # read train/valid/test splits
+        self.mask_colors = pd.read_csv(os.path.join(self.files_directory, 
+                                               'colors.txt'), delimiter=' ')
+        self.mask_colors['mask_label'] = self.mask_colors.index
+        #Replacing the follwing
+        '''
+        [['Terrain',     0   1],
+         ['Sky',         1   2],
+         ['Tree',        2   3],
+         ['Vegetation'   3   3],
+         ['Building',    4   4],
+         ['Road',        5   5],
+         ['GuardRail',   6   0],
+         ['TrafficSign', 7   0],
+         ['TrafficLight',8   0],
+         ['Pole',        9   0],
+         ['Misc', ,      10  0],
+         ['Truck',       11  6],
+         ['Car', ,       12  6],
+         ['Van',         13  6],
+         ['Undefined',   14  0]]
+        '''
+        current_labels = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+        replace_labels = [1,2,3,3,4,5,0,0,0,0, 0, 6, 6, 6, 0]
+        self.mask_colors['mask_label'] =self.mask_colors['mask_label'].replace(current_labels, 
+                                                                               replace_labels)
+        print ("Total classes ", len(self.mask_colors['mask_label'].unique()))
+        print ("Total classes ", (self.mask_colors['mask_label'].unique()))
+        #Final classes are
+        self.mask_colors = self.mask_colors.values.tolist()
+        self.label_names = ['misc', 'Terrain', 'Sky', 'Tree', 'Building', 'Road', 'Vehicle']
+      
+    def __len__(self) -> int:
+        return len(self.filenames)
+    
+    def __getitem__(self, idx: int) -> dict:
+
+        _, scene, scenario, camera, frame_number, x = self.filenames[idx]
+        data_filename = scene+'_'+scenario+'_'+camera+'_'+str(frame_number).zfill(5)+'.h5'
+        data_filename = os.path.join(self.files_directory, data_filename)
+        sample = {}
+        #Reading image as numpy
+        with h5py.File(data_filename, 'r') as data: 
+            sample['image'] = np.asarray(Image.open(io.BytesIO(np.array(data['image']))))
+            sample['mask'] = np.asarray(Image.open(io.BytesIO(np.array(data['mask']))))
+            #sample['depth'] = np.asarray(Image.open(io.BytesIO(np.array(data['depth']))))
+            transformation_matrices=np.array(data['extrinsic'])
+            #Was geting a user warning that array is not writeable and pytroch needs writeable
+            sample['image'] = np.copy(sample['image'])
+            sample['mask'] = np.copy(sample['mask'])
+            #sample['depth'] = np.copy(sample['depth'])
+            
+
+        sample['mask'] = self._preprocess_mask(sample['mask'])
+        
+        #Applies transformation and converts to tensor
+        if self.transforms is not None:            
+            transformed = self.transforms(image=sample['image'], 
+                                          mask=sample['mask'],
+                                          depth=None)
+
+            sample['image'] = transformed['image']
+            sample['mask'] = transformed['mask'].long()
+        
+
+        return sample
+    
+    def _preprocess_mask(self, mask: np.ndarray) -> np.ndarray:
+        ''' 
+        Convert RGB mask to single channel mask based on the color value
+        provided in color.txt file 
+        
+        Parameters:
+            mask: Numpy array mask of shape [height, width, 3]
+            out: Numpy array of shape [height, width]
+        '''
+        preprocessed_mask = np.zeros(mask.shape[:2])
+        for index, row in enumerate(self.mask_colors):
+            # The columns of  mask_color dataframe is ['Terrain', r, g, b, mask_label]
+            idx = np.all(mask == (row[1], row[2], row[3]), axis=-1) #
+            preprocessed_mask[idx] = row[4]
+
+        return preprocessed_mask
+
+    def _read_split(self) -> list:
+        ''' 
+        Parses the virual kitti dataset and converts to a pandas dataframe
+        
+        Parameters:
+            out: A list
+        '''
+
+        filenames = pd.read_csv(self.files_directory+'/virtual_kiti_file_naming.csv')
+                
+        if self.mode == "train":  # 90% for train
+            # Creating a dataframe with 50%
+            #filenames = filenames.sample(frac = 0.6, random_state=55)
+            filenames = filenames[filenames['scenario'].isin(self.subset)]
+        elif self.mode == "valid":  # 10% for validation
+            #sampling the same files with the random_state and droping them
+            #train_filenames = filenames.sample(frac = 0.6, random_state=55)
+            #filenames = filenames.drop(train_filenames.index)
+            filenames = filenames[filenames['scenario'].isin(self.val_subset)]
+            
+        return filenames.values.tolist()
+
 

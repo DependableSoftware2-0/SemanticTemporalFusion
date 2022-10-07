@@ -3,7 +3,7 @@ import torch
 import shutil
 import numpy as np
 
-from PIL import Image
+from PIL import Image, Resampling
 from tqdm import tqdm
 from urllib.request import urlretrieve
 import h5py
@@ -80,7 +80,7 @@ class SimpleRoboCupDataset(RoboCupDataset):
 
         # resize images
         image = np.array(Image.fromarray(sample["image"]).resize((256, 256), Image.LINEAR))
-        mask = np.array(Image.fromarray(sample["mask"]).resize((256, 256), Image.NEAREST))
+        mask = np.array(Image.fromarray(sample["mask"]).resize((256, 256), Resampling.NEAREST))
 
         # convert to other format HWC -> CHW
         sample["image"] = np.moveaxis(image, -1, 0)
@@ -217,7 +217,6 @@ class RoboCupDatasetWithPose(torch.utils.data.Dataset):
                     rotation_1_to_new_2_frame, \
                     translation_1_to_2_camera_frame = self._give_rotation_translation(transformation_matrices[1], 
                                                                                       transformation_matrices[2])
-                except: 
                 except: 
                     print ("Transformation error in sequence : ", seq_filenames)
                     return None
